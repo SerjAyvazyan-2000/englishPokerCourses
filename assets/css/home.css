@@ -1,0 +1,634 @@
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1596451190630-186aff535bf2?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+    background-color: #e6b800;
+}
+
+.services {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
+
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.services .intro {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #555;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 16px 0 8px;
+}
+
+.card p {
+    font-size: 1rem;
+    padding: 0 16px 20px;
+    color: #666;
+}
+
+
+
+
+
+.about {
+    background-color: #fff;
+    padding: 60px 15px ;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1 1 45%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    flex: 1 1 50%;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.about-content ul li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.about-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.about-btn {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.about-btn:hover {
+    background-color: #e6b800;
+}
+
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content p, .about-content ul li {
+        font-size: 1rem;
+    }
+}
+
+
+.faq {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 16px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.faq-question span {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding-left: 0;
+}
+
+.faq-answer p {
+    padding: 0 0 16px;
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding-left: 10px;
+}
+
+.faq-item.active .faq-question span {
+    transform: rotate(45deg); /* превращаем + в x */
+}
+
+@media (max-width: 600px) {
+    .faq h2 {
+        font-size: 2rem;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+}
+
+.contact {
+    padding: 60px 20px;
+    background-color: #111;
+    color: #fff;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    text-align: center;
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.contact-info {
+    flex: 1 1 300px;
+}
+
+.contact-info p,
+.contact-info a {
+    color: #ccc;
+    font-size: 1rem;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.socials {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-form {
+    flex: 1 1 400px;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #eee;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2c2c2c;
+    color: #fff;
+    font-size: 1rem;
+    resize: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #e63946;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #d62828;
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+}
+
+
+.price-section {
+    padding: 80px 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.price-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.price-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    width: 300px;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+}
+
+.price-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #e63946;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #777;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.price-card ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.btn {
+    background-color: #e63946;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d62828;
+}
+
+.highlighted {
+    border: 2px solid #e63946;
+    transform: scale(1.05);
+}
+
+
+.cookie-policy {
+    background-color: #fff;
+    padding: 40px 0;
+    margin-top: 100px;
+}
+
+
+
+.cookie-policy h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #111;
+}
+
+.cookie-policy h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #222;
+}
+
+.cookie-policy h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.cookie-policy ul {
+    list-style: disc;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.cookie-policy ul li {
+    margin-bottom: 10px;
+}
+
+.cookie-policy p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+
+
+    .cookie-policy h1 {
+        font-size: 2rem;
+    }
+
+    .cookie-policy h2 {
+        font-size: 1.8rem;
+    }
+
+    .cookie-policy h3 {
+        font-size: 1.3rem;
+    }
+
+    .cookie-policy p {
+        font-size: 1rem;
+    }
+}
+
+
+
+.cookie-notification {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+.cookie-notification-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cookie-notification p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.cookie-notification a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.cookie-notification a:hover {
+    text-decoration: underline;
+}
+
+.cookie-notification button {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cookie-notification button:hover {
+    background-color: #0088cc;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .cookie-notification p {
+        font-size: 0.9rem;
+    }
+
+    .cookie-notification button {
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+
+
+}
+
